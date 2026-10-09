@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking - JadiBatek</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+
+    background-image: url('DSC09557.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+
+header {
+    background-color: white;
+    padding: 12px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 155px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #8b542f;
+}
+
+nav ul li a.active {
+    color: #5c3723;
+    font-weight: bold;
+}
+
+/* BOOKING SECTION */
+
+.booking-section {
+    width: 650px;
+    max-width: 90%;
+    margin: 55px auto;
+    padding: 35px 40px;
+    background-color: rgba(92, 55, 35, 0.96);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    color: white;
+}
+
+.booking-section h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    color: #fff8ed;
+    text-align: left;
+}
+
+/* BOOKING DESCRIPTION */
+
+.booking-intro {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f3dfc5;
+}
+
+.booking-description {
+    margin: 0 0 25px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* FORM */
+
+.booking-section label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff8ed;
+}
+
+.booking-section input,
+.booking-section select,
+.booking-section textarea {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #c7a27c;
+    border-radius: 6px;
+    background-color: #fffaf3;
+    color: #3d281c;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.booking-section textarea {
+    resize: vertical;
+}
+
+.booking-section input:focus,
+.booking-section select:focus,
+.booking-section textarea:focus {
+    outline: 2px solid #c58b52;
+    outline-offset: 1px;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c58b52;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #a96f3b;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* POPUP */
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 9999;
+}
+
+.popup-content {
+    width: 400px;
+    max-width: 100%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    color: #3d281c;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    color: #5c3723;
+}
+
+.popup-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.popup-btn {
+    padding: 11px 25px;
+    margin: 10px 5px 0;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ddd;
+    color: #333;
+}
+
+.confirm-btn,
+.ok-btn {
+    background-color: #5c3723;
+    color: white;
+}
+
+.success-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    header {
+        padding: 12px 25px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .booking-section {
+        margin: 35px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav ul {
+        gap: 12px 18px;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .booking-section {
+        max-width: 92%;
+        padding: 25px 20px;
+    }
+
+    .booking-section h1 {
+        font-size: 27px;
+    }
+
+    .booking-intro {
+        font-size: 15px;
+    }
+
+    .booking-description {
+        font-size: 14px;
+    }
+
+    .popup-content {
+        padding: 25px 20px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        <img src="LOGO 2.png" alt="JadiBatek Logo">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="booking.html" class="active">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- BOOKING SECTION -->
+
+<section class="booking-section">
+
+    <h1>Book Your Batik Workshop</h1>
+
+    <p class="booking-intro">
+        Create Your Own Batik Masterpiece!
+        <br>
+        No experience needed | Suitable for beginners
+    </p>
+
+    <!-- ACTIVITY DESCRIPTION -->
+
+    <p class="booking-description">
+        Choose from a variety of batik workshops, including batik
+        colouring, drawing, tote bag decoration, T-shirt batik, and
+        batik scarf and pareo activities. Select your preferred activity
+        and date to book your workshop experience with JadiBatek.
+    </p>
+
+    <!-- BOOKING FORM -->
+
+    <form id="bookingForm">
+
+        <label for="name">Full Name:</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <label for="email">Email Address:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <label for="phone">Phone Number:</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+        >
+
+        <label for="activity">Select Activity:</label>
+
+        <select id="activity" name="activity" required>
+
+            <option value="">-- Select Workshop --</option>
+            <option value="Mini Batik - RM22">Mini Batik - RM22</option>
+            <option value="Small Batik - Colouring Only - RM38">Small Batik - Colouring Only - RM38</option>
+            <option value="Small Batik - Drawing & Colouring - RM48">Small Batik - Drawing & Colouring - RM48</option>
+            <option value="Standard Batik - Cotton - RM78">Standard Batik - Cotton - RM78</option>
+            <option value="Standard Batik - Silk - RM98">Standard Batik - Silk - RM98</option>
+            <option value="Tote Bag - Colouring Only - RM68">Tote Bag - Colouring Only - RM68</option>
+            <option value="Tote Bag - Drawing & Colouring - RM78">Tote Bag - Drawing & Colouring - RM78</option>
+            <option value="T-Shirt - Adult - RM88">T-Shirt - Adult - RM88</option>
+            <option value="T-Shirt - Kid - RM68">T-Shirt - Kid - RM68</option>
+            <option value="Scarf Batik - Cotton - RM250">Scarf Batik - Cotton - RM250</option>
+            <option value="Scarf Batik - Silk - RM300-350">Scarf Batik - Silk - RM300-350</option>
+            <option value="Pareo Batik - Cotton - RM350">Pareo Batik - Cotton - RM350</option>
+            <option value="Pareo Batik - Silk - RM450-550">Pareo Batik - Silk - RM450-550</option>
+
+        </select>
+
+        <label for="date">Preferred Date:</label>
+        <input
+            type="date"
+            id="date"
+            name="date"
+            required
+        >
+
+        <label for="people">Number of Participants:</label>
+        <input
+            type="number"
+            id="people"
+            name="people"
+            min="1"
+            max="20"
+            placeholder="Number of participants"
+            required
+        >
+
+        <label for="message">Additional Request:</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Any additional request..."
+        ></textarea>
+
+        <button type="submit" class="submit-btn">
+            Submit Booking
+        </button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 JadiBatek. All Rights Reserved.</p>
+</footer>
+
+<!-- CONFIRM BOOKING POPUP -->
+
+<div id="confirmPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Confirm Booking?</h2>
+
+        <p>
+            Are you sure you want to confirm this booking?
+        </p>
+
+        <button
+            type="button"
+            class="popup-btn cancel-btn"
+            onclick="cancelBooking()"
+        >
+            Cancel
+        </button>
+
+        <button
+            type="button"
+            class="popup-btn confirm-btn"
+            onclick="confirmBooking()"
+        >
+            Confirm
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SUCCESS POPUP -->
+
+<div id="successPopup" class="popup">
+
+    <div class="popup-content">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Booking Successful!</h2>
+
+        <p>
+            Your batik workshop booking has been successfully confirmed.
+        </p>
+
+        <button
+            type="button"
+            class="popup-btn ok-btn"
+            onclick="closeSuccess()"
+        >
+            OK
+        </button>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+const form = document.getElementById("bookingForm");
+const confirmPopup = document.getElementById("confirmPopup");
+const successPopup = document.getElementById("successPopup");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    confirmPopup.style.display = "flex";
+});
+
+function cancelBooking() {
+    confirmPopup.style.display = "none";
+}
+
+function confirmBooking() {
+    confirmPopup.style.display = "none";
+    successPopup.style.display = "flex";
+}
+
+function closeSuccess() {
+    successPopup.style.display = "none";
+    form.reset();
+}
+</script>
+
+</body>
+</html>

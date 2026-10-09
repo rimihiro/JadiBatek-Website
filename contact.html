@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - JadiBatek</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+
+    background-image: url('DSC09604.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+
+header {
+    background-color: white;
+    padding: 12px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 155px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #8b542f;
+}
+
+nav ul li a.active {
+    color: #5c3723;
+    font-weight: bold;
+}
+
+/* MAIN CONTENT */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0;
+    width: 900px;
+    max-width: 90%;
+}
+
+.contact-top {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    overflow-wrap: anywhere;
+}
+
+.contact-box h2,
+.map-box h2 {
+    margin-top: 0;
+    color: #3d281c;
+}
+
+.contact-box p {
+    line-height: 1.6;
+}
+
+.contact-box a {
+    color: #5c3723;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+.contact-box a:hover {
+    color: #a96f3b;
+}
+
+/* GOOGLE MAP */
+
+.map-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.map-box h2 {
+    margin-bottom: 15px;
+}
+
+.map {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    header {
+        padding: 12px 25px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        padding: 35px 0;
+    }
+
+    .contact-top {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav ul {
+        gap: 12px 18px;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .contact {
+        max-width: 92%;
+        padding: 30px 0;
+        gap: 20px;
+    }
+
+    .contact-top {
+        flex-direction: column;
+    }
+
+    .contact-box {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .map-box {
+        padding: 20px;
+    }
+
+    .map {
+        height: 280px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        <img src="LOGO 2.png" alt="JadiBatek Logo">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- MAIN CONTENT -->
+
+<main>
+
+    <section class="contact">
+
+        <!-- CONTACT INFORMATION AND SOCIAL MEDIA -->
+
+        <div class="contact-top">
+
+            <div class="contact-box">
+
+                <h2>Contact Information</h2>
+
+                <p>
+                    <strong>Email:</strong>
+                    <br>
+                    <a href="mailto:info@jadibatek.com">
+                        info@jadibatek.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    <br>
+                    <a href="tel:+60321451133">
+                        +60 3 21451133
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Address:</strong>
+                    <br>
+                    30, Jalan Inai, Off Jalan Imbi,
+                    <br>
+                    55100 Kuala Lumpur, Malaysia.
+                </p>
+
+            </div>
+
+            <!-- FOLLOW US -->
+
+            <div class="contact-box">
+
+                <h2>Follow Us</h2>
+
+                <p>
+                    Instagram
+                    <br>
+                    <a href="https://www.instagram.com/jadibatek?igsh=aHQ3NWtlYm9jaWs3"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Instagram JadiBatek
+                    </a>
+                </p>
+
+                <p>
+                    X/Twitter
+                    <br>
+                    <a href="https://x.com/jadibatek"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Twitter JadiBatek
+                    </a>
+                </p>
+
+                <p>
+                    TikTok
+                    <br>
+                    <a href="https://www.tiktok.com/@jadibatek?_r=1&_t=ZS-98oufK6oczc"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        TikTok JadiBatek
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- GOOGLE MAP -->
+
+        <div class="map-box">
+
+            <h2>Find Us</h2>
+
+            <iframe
+                class="map"
+                src="https://www.google.com/maps?q=JadiBatek,+30+Jalan+Inai,+Off+Jalan+Imbi,+55100+Kuala+Lumpur&output=embed"
+                title="JadiBatek location map"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 JadiBatek. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

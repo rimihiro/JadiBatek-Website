@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - JadiBatek</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('DSC09596.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: white;
+            padding: 12px 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 155px;
+            height: 80px;
+            object-fit: contain;
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333333;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8b542f;
+        }
+
+        /* ABOUT SECTION */
+
+        .about-section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+        }
+
+        .about-image {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 850px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            background-color: rgba(74, 44, 26, 0.94);
+            padding: 40px;
+            border-radius: 15px;
+            color: white;
+            line-height: 1.7;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-text h1 {
+            margin-top: 0;
+            color: white;
+            font-size: 32px;
+        }
+
+        .about-text h2 {
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: rgba(20, 20, 20, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            header {
+                padding: 12px 25px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .about-section {
+                margin: 30px auto;
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px 18px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .about-section {
+                padding: 15px;
+            }
+
+            .about-image img {
+                height: 250px;
+            }
+
+            .about-text {
+                padding: 25px;
+            }
+
+            .about-text h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            <img src="LOGO 2.png" alt="JadiBatek Logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about-section">
+
+        <div class="about-image">
+            <img src="DSC09621.jpg" alt="About Batik">
+        </div>
+
+        <div class="about-text">
+
+            <h1>About JadiBatek</h1>
+
+            <p>
+                Jadi Batek has been in the industry for over four decades
+                with experiences in the local Batik art heritage and prides
+                in our wealth of knowledge in the field amongst many others.
+                We have a multi-talented team of Batik designers and artists
+                who are highly skilled in the national craft and share
+                similar passion in producing only the finest Batik.
+                Jadi Batek also strives to be the epicenter to enrich the
+                quality of life with the beauty of Batik and its importance,
+                by consistently improving our designs and quality that are
+                initiative and modern, yet rooted to its cultural origins.
+            </p>
+
+            <p>
+                Our gallery displays various collections of handmade batik
+                from different states in Malaysia.
+            </p>
+
+            <!-- VISION -->
+
+            <h2>Vision</h2>
+
+            <p>
+                Jadi Batek strives to be the epicenter of batik cultures
+                in the world. Batik is our life and we would like batik
+                to be preserved for another 1000 years. We believe that
+                batik which is handmade, comes with soul and cannot be
+                replaced by industrialization and digitalization. We would
+                like to lead in the design, production, promotion and
+                education of batik in the world.
+            </p>
+
+            <!-- MISSION -->
+
+            <h2>Mission</h2>
+
+            <p>
+                The mission of Jadi Batek is to enrich the quality of life
+                with batik cultures. We will preserve, innovate and lead
+                the batik arts and provide the best authentic products
+                and experience to our global customers.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© 2026 JadiBatek. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

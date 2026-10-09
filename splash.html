@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JadiBatek</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .splash {
+            width: 100%;
+            height: 100vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url("LOGO 3.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .splash-content {
+            color: white;
+        }
+
+        .splash-content h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .splash-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .loading {
+            width: 45px;
+            height: 45px;
+
+            border: 5px solid rgba(255,255,255,0.4);
+            border-top: 5px solid white;
+
+            border-radius: 50%;
+
+            animation: spin 1s linear infinite;
+
+            margin: auto;
+        }
+
+        @keyframes spin {
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="splash">
+
+        <div class="splash-content">
+
+            <h1>JadiBatek</h1>
+
+            <p>Discover the Beauty of Malaysian Batik</p>
+
+            <div class="loading"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        setTimeout(function() {
+
+            window.location.href = "index.html";
+
+        }, 5000);
+
+    </script>
+
+</body>
+
+</html>
